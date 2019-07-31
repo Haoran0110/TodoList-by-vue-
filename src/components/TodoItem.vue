@@ -4,10 +4,10 @@
 
 <script>
 export default {
-   props:['content','index'],
-   methods:{
-     handleDelete (){
-       this.$emit('delete',this.index)   //把从父组件接收的下标带回给子组件
+  props:['content','index'],
+  methods:{
+    handleDelete (){
+      this.$emit('delete',this.index)   //把从父组件接收的下标带回给子组件
      }
    }
 }

@@ -2,12 +2,13 @@
 // (runtime-only or standalone) has been set in webpack.base.conf with an alias.
 import Vue from 'vue'
 import todolist from './todolist'
+import login from './login'
 
 Vue.config.productionTip = false
 
 /* eslint-disable no-new */
 new Vue({
   el: '#app',
-  components: { todolist },
-  template: '<todolist/>'
+  components: { login },
+  template: '<login/>'
 })
