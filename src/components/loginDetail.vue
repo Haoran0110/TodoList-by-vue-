@@ -1,10 +1,16 @@
 <template>
 <div>
-    <li class="mt" @click="handleClear">{{content}}</li>
+    <div>
+        <li class="mt" @click="handleClear">{{content}}</li>
+    </div>
+    <button @click="handleJump">点我跳转</button>
 </div>
+
 </template>
 
 <script>
+
+
 export default {
     props:['content','index'],
     // computed:{
@@ -15,6 +21,9 @@ export default {
     methods:{
         handleClear(){
             this.content=''
+        },
+        handleJump(){
+            this.$router.push('./TodoItem')
         }
     }
     }

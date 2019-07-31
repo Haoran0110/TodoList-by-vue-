@@ -1,5 +1,8 @@
 <template>
+<div>
   <li class="item" @click="handleDelete">{{content}}</li>
+  <button @click="haddleBack">点我返回</button>
+</div>
 </template>
 
 <script>
@@ -8,6 +11,9 @@ export default {
   methods:{
     handleDelete (){
       this.$emit('delete',this.index)   //把从父组件接收的下标带回给子组件
+     },
+     handleBack(){
+       this.$router.push("/loginDetail")
      }
    }
 }
