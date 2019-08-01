@@ -1,7 +1,11 @@
 <template>
-<div>
-  <li class="item" @click="handleDelete">{{content}}</li>
-  <button @click="haddleBack">点我返回</button>
+  <div>
+    <div>
+      <li class="item" @click="handleDelete">{{content}}</li>
+      <router-link to="/components/loginDetail">clickhere</router-link>
+      <button @click="handleBack">点我返回</button>
+    </div>
+    <router-view></router-view>
 </div>
 </template>
 
@@ -13,7 +17,7 @@ export default {
       this.$emit('delete',this.index)   //把从父组件接收的下标带回给子组件
      },
      handleBack(){
-       this.$router.push("/loginDetail")
+       this.$router.push("loginDetail")
      }
    }
 }

@@ -1,37 +1,39 @@
 <template>
 <div>
-    <div>
-        <li class="mt" @click="handleClear">{{content}}</li>
+    <div class="link">  
+        <router-link to="/TodoItem">clickme</router-link>
     </div>
-    <button @click="handleJump">点我跳转</button>
+    <div class="content">
+        <router-view :key="key"></router-view>
+    </div>
 </div>
-
 </template>
 
 <script>
 
-
 export default {
+    data(){
+        return{
+            routerAlive:true
+        }
+    },
     props:['content','index'],
     // computed:{
     //     fullcontent(){
     //         return '用户名'+this.content+'密码'+this.content
     //     }
     // }
-    methods:{
-        handleClear(){
-            this.content=''
-        },
-        handleJump(){
-            this.$router.push('./TodoItem')
-        }
-    }
-    }
+        computed:{
+	    key(){
+	        return this.$route.path + Math.random();
+	        }
+	    },
+}
 </script>
+
 
 <style scoped>
     .mt{
         color: rgb(85, 85, 192);
     }
 </style>
-
