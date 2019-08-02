@@ -7,6 +7,8 @@ import loginDetail from './components/loginDetail'
 import trans from './trans'
 import Todolist from './todolist'
 import routers from "./routers"
+import FormBinding from './components/FormBinding'
+import ComponentNew from './ComponentNew'
 
 Vue.use(VueRouter)
  
@@ -26,5 +28,5 @@ const router = new VueRouter({
 new Vue({
   el: '#app',
   router,
-  render: h => h(loginDetail)
+  render: h => h(ComponentNew)
 })
