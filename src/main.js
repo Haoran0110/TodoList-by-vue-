@@ -9,6 +9,7 @@ import Todolist from './todolist'
 import routers from "./routers"
 import FormBinding from './components/FormBinding'
 import ComponentNew from './ComponentNew'
+import velocity from './components/velocity'
 
 Vue.use(VueRouter)
  
@@ -28,5 +29,5 @@ const router = new VueRouter({
 new Vue({
   el: '#app',
   router,
-  render: h => h(ComponentNew)
+  render: h => h(velocity)
 })
