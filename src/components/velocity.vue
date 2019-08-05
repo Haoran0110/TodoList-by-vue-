@@ -2,13 +2,13 @@
     <div>
         <label>
             ID:
-            <input type="text" v-model="id"/>
+            <input class="id" type="text" v-model="id"/>
         </label>
         <label>
             Name:
-            <input type="text" v-model="name"/>
+            <input class="name" type="text" v-model="name"/>
         </label>
-        <input type="button" value="添加" @click="handleAdd">
+        <input class="add" type="button" value="添加" @click="handleAdd">
         <transition-group name="my" appear>
             <li v-for="(item,i) of list" 
                 :key="item.id"
@@ -74,6 +74,19 @@ export default {
         .my-move {   /* 删除时拥有淡出的样式 */
             position: absolute;
             transition: all 0.6s ease;
+        }
+        .add {
+            background-color:rgba(184, 25, 25, 0.788);
+            border-radius: 2px;
+            color: white;
+            height: 20px;
+            width: 50px
+        }
+        .id {
+            border-radius: 5px
+        }
+        .name {
+            border-radius: 5px
         }
  
 </style>
