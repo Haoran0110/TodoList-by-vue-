@@ -55,7 +55,7 @@ export default {
             width: 100%;
         }
         li:hover {
-            background-color: rgb(92, 208, 243);
+            background-color: rgba(184, 25, 25, 0.788);
             transition: all 0.8s ease;  /*鼠标悬停时，出现背景色。让这个背景色的出现，也加一个淡入的动画*/
         }
  
