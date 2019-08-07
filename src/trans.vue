@@ -2,7 +2,7 @@
     <div id="app">
         <button @click="handleTran" class="btn">点我渐变</button>
         <transition name="fade">
-            <p v-if="show" class="text">我是一段可以渐变消失的文字哦😀</p>
+            <p v-if="show" class="text">我是一段可以渐变消失的文字哦 😀</p>
         </transition>
     </div>
 </template>
@@ -34,11 +34,8 @@ export default {
 }
 .btn{
     border-radius: 5px;
-    background-color:skyblue;
+    background-color:blueviolet;
     color: white;
-    font-size: 20px;
-    height: 50px;
-    width: 200px;
 }
 .text{
     color: royalblue

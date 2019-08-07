@@ -29,5 +29,5 @@ const router = new VueRouter({
 new Vue({
   el: '#app',
   router,
-  render: h => h(velocity)
+  render: h => h(trans)
 })
